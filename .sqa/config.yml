@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.8
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/FALL3D-suite/FALL3D:
+      branch: master
+      repo: https://github.com/FALL3D-suite/FALL3D
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/FALL3D-suite/FALL3D git:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-azure-wallaby.sh
+        container: qc.acc_blurry-grey-opossum
+  QC.Doc:
+    repos:
+      github.com/FALL3D-suite/FALL3D find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.wimpy-sapphire-squirrel.sh
+        container: qc.doc_lumpy-bistre-chameleon
+      github.com/FALL3D-suite/FALL3D git:
+        commands:
+        - /usr/bin/env sh .sqa/script.fuzzy-lemon-hamster.sh
+        container: qc.doc_dorky-amethyst-gharial
+      github.com/FALL3D-suite/FALL3D markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.thirsty-vermilion-civet.sh
+        container: qc.doc_bluesy-cinnabar-bird
+  QC.Lic:
+    repos:
+      github.com/FALL3D-suite/FALL3D licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.snoopy-red-bloodhound.sh
+        container: qc.lic_pasty-cardinal-bee
+  QC.Met:
+    repos:
+      github.com/FALL3D-suite/FALL3D cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.sickly-ruby-okapi.sh
+        container: qc.met_squirrely-cardinal-mau
+  QC.Sec:
+    repos:
+      github.com/FALL3D-suite/FALL3D bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-apricot-monster.sh
+        container: qc.sec_cloudy-lemon-monkey
+  QC.Sty:
+    repos:
+      github.com/FALL3D-suite/FALL3D flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.smelly-thistle-pinscher.sh
+        container: qc.sty_beady-asparagus-badger
+  QC.Ver:
+    repos:
+      github.com/FALL3D-suite/FALL3D get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.flaky-ivory-badger.sh
+        container: qc.ver_woolly-charcoal-balinese
+timeout: 5400
