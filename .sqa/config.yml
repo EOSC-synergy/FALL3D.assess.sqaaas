@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       gitlab.com/fall3d-suite/fall3d git:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-cyan-pig.sh
-        container: qc.acc_scaly-pink-gerbil
+        - /usr/bin/env sh .sqa/script.nippy-blue-cow.sh
+        container: qc.acc_dorky-gamboge-peccary
   QC.Doc:
     repos:
       gitlab.com/fall3d-suite/fall3d find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-orange-magpie.sh
-        container: qc.doc_pokey-aquamarine-chameleon
+        - /usr/bin/env sh .sqa/script.gamy-orange-dunker.sh
+        container: qc.doc_lovely-smalt-devil
       gitlab.com/fall3d-suite/fall3d git:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-burgundy-quail.sh
-        container: qc.doc_cheeky-heliotrope-chihuahua
+        - /usr/bin/env sh .sqa/script.gummy-grey-maltese.sh
+        container: qc.doc_muggy-sepia-argentino
       gitlab.com/fall3d-suite/fall3d markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-myrtle-cuscus.sh
-        container: qc.doc_shaggy-russet-antelope
+        - /usr/bin/env sh .sqa/script.geeky-razzmatazz-seal.sh
+        container: qc.doc_wimpy-alizarin-beaver
   QC.Lic:
     repos:
       gitlab.com/fall3d-suite/fall3d licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-tangerine-uguisu.sh
-        container: qc.lic_trippy-lilac-rottweiler
+        - /usr/bin/env sh .sqa/script.chummy-wisteria-abyssinian.sh
+        container: qc.lic_scaly-wisteria-heron
   QC.Met:
     repos:
       gitlab.com/fall3d-suite/fall3d cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-malachite-caiman.sh
-        container: qc.met_scummy-indigo-mastiff
+        - /usr/bin/env sh .sqa/script.slaphappy-indigo-cuscus.sh
+        container: qc.met_scaly-thistle-hare
   QC.Sec:
     repos:
       gitlab.com/fall3d-suite/fall3d bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-sapphire-flounder.sh
-        container: qc.sec_shaky-copper-jellyfish
+        - /usr/bin/env sh .sqa/script.gamy-brown-toad.sh
+        container: qc.sec_scaly-vermilion-frigatebird
   QC.Sty:
     repos:
       gitlab.com/fall3d-suite/fall3d flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-turquoise-dingo.sh
-        container: qc.sty_ugly-russet-rattlesnake
+        - /usr/bin/env sh .sqa/script.frumpy-pumpkin-hummingbird.sh
+        container: qc.sty_gimpy-amethyst-whippet
   QC.Ver:
     repos:
       gitlab.com/fall3d-suite/fall3d get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-gamboge-gorilla.sh
-        container: qc.ver_slaphappy-azure-squirrel
+        - /usr/bin/env sh .sqa/script.sleazy-brown-heron.sh
+        container: qc.ver_chewy-azure-mammoth
 timeout: 5400
