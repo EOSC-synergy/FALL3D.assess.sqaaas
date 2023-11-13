@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.11
+      branch: release/1.7.13
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/FALL3D-suite/FALL3D:
       branch: master
@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/FALL3D-suite/FALL3D git:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-cerulean-chipmunk.sh
-        container: qc.acc_shabby-sepia-goat
+        - /usr/bin/env sh .sqa/script.pokey-charcoal-robin.sh
+        container: qc.acc_chummy-cinnamon-squirt
   QC.Doc:
     repos:
       github.com/FALL3D-suite/FALL3D find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-cinnabar-dane.sh
-        container: qc.doc_leaky-turquoise-mouse
+        - /usr/bin/env sh .sqa/script.wimpy-aqua-mouse.sh
+        container: qc.doc_pretty-charcoal-saola
       github.com/FALL3D-suite/FALL3D git:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-ultramarine-newt.sh
-        container: qc.doc_nippy-tan-crocodile
+        - /usr/bin/env sh .sqa/script.snazzy-chartreuse-blue.sh
+        container: qc.doc_shabby-maroon-tang
       github.com/FALL3D-suite/FALL3D markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-azure-mole.sh
-        container: qc.doc_stinky-auburn-squirrel
+        - /usr/bin/env sh .sqa/script.pasty-platinum-jellyfish.sh
+        container: qc.doc_crappy-tangerine-russel
   QC.Lic:
     repos:
       github.com/FALL3D-suite/FALL3D licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-mauve-coral.sh
-        container: qc.lic_clammy-emerald-tapir
+        - /usr/bin/env sh .sqa/script.silly-silver-rattlesnake.sh
+        container: qc.lic_beady-celadon-sheep
   QC.Met:
     repos:
       github.com/FALL3D-suite/FALL3D cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-linen-flounder.sh
-        container: qc.met_cheeky-pear-angelfish
+        - /usr/bin/env sh .sqa/script.breezy-cerise-guppy.sh
+        container: qc.met_baggy-sepia-bloodhound
   QC.Sec:
     repos:
       github.com/FALL3D-suite/FALL3D bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-russet-mongoose.sh
-        container: qc.sec_paltry-maroon-russel
+        - /usr/bin/env sh .sqa/script.nippy-coral-rottweiler.sh
+        container: qc.sec_messy-khaki-hornet
   QC.Sty:
     repos:
       github.com/FALL3D-suite/FALL3D flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-buff-chimpanzee.sh
-        container: qc.sty_gloppy-olivine-reindeer
+        - /usr/bin/env sh .sqa/script.homey-cerulean-balinese.sh
+        container: qc.sty_cranky-violet-jackal
   QC.Ver:
     repos:
       github.com/FALL3D-suite/FALL3D get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-khaki-worm.sh
-        container: qc.ver_muggy-russet-armadillo
+        - /usr/bin/env sh .sqa/script.goopy-pumpkin-audemer.sh
+        container: qc.ver_flabby-mauve-bison
 timeout: 5400
