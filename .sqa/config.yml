@@ -2,63 +2,73 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.13
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/FALL3D-suite/FALL3D:
+    gitlab.com/fall3d-suite/fall3d:
       branch: master
-      repo: https://github.com/FALL3D-suite/FALL3D
+      repo: https://gitlab.com/fall3d-suite/fall3d
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/FALL3D-suite/FALL3D git:
+      gitlab.com/fall3d-suite/fall3d git:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-taupe-angelfish.sh
-        container: qc.acc_pokey-rust-newt
+        - /usr/bin/env sh .sqa/script.lanky-rust-kudu.sh
+        container: qc.acc_cheeky-white-dog
   QC.Doc:
     repos:
-      github.com/FALL3D-suite/FALL3D find_doc_files.py:
+      gitlab.com/fall3d-suite/fall3d find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-russet-bat.sh
-        container: qc.doc_trippy-bronze-quoll
-      github.com/FALL3D-suite/FALL3D git:
+        - /usr/bin/env sh .sqa/script.beady-goldenrod-mongrel.sh
+        container: qc.doc_chummy-olivine-oyster
+      gitlab.com/fall3d-suite/fall3d git:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-turquoise-moth.sh
-        container: qc.doc_beady-tan-lemur
-      github.com/FALL3D-suite/FALL3D markdownlint:
+        - /usr/bin/env sh .sqa/script.wheezy-apricot-cassowary.sh
+        container: qc.doc_homey-lemon-bee
+      gitlab.com/fall3d-suite/fall3d markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-pear-burmese.sh
-        container: qc.doc_hasty-auburn-cat
+        - /usr/bin/env sh .sqa/script.nerdy-viridian-buffalo.sh
+        container: qc.doc_wimpy-auburn-mandrill
   QC.Lic:
     repos:
-      github.com/FALL3D-suite/FALL3D licensee:
+      gitlab.com/fall3d-suite/fall3d licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-orchid-pinscher.sh
-        container: qc.lic_hilly-copper-hippopotamus
+        - /usr/bin/env sh .sqa/script.sloppy-periwinkle-capuchin.sh
+        container: qc.lic_ugly-apricot-dingo
   QC.Met:
     repos:
-      github.com/FALL3D-suite/FALL3D cff-converter-python:
+      gitlab.com/fall3d-suite/fall3d cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-persimmon-gharial.sh
-        container: qc.met_snoopy-chestnut-woodpecker
+        - /usr/bin/env sh .sqa/script.lousy-champagne-mole.sh
+        container: qc.met_crabby-dandelion-squirt
   QC.Sec:
     repos:
-      github.com/FALL3D-suite/FALL3D bandit:
+      gitlab.com/fall3d-suite/fall3d bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-smalt-forest.sh
-        container: qc.sec_silly-champagne-eleuth
+        - /usr/bin/env sh .sqa/script.smelly-coral-wombat.sh
+        container: qc.sec_hilly-lime-rabbit
   QC.Sty:
     repos:
-      github.com/FALL3D-suite/FALL3D flake8:
+      gitlab.com/fall3d-suite/fall3d flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-alizarin-mist.sh
-        container: qc.sty_gimpy-cinnamon-frog
+        - /usr/bin/env sh .sqa/script.lousy-periwinkle-drever.sh
+        container: qc.sty_trippy-orchid-caterpillar
+      gitlab.com/fall3d-suite/fall3d jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-denim-labradoodle.sh
+        container: qc.sty_thirsty-brown-cheetah
+  QC.Uni:
+    repos:
+      gitlab.com/fall3d-suite/fall3d pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaky-periwinkle-antelope.sh
+        container: qc.uni_pasty-cerise-neanderthal
   QC.Ver:
     repos:
-      github.com/FALL3D-suite/FALL3D get_git_tags.py:
+      gitlab.com/fall3d-suite/fall3d get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-salmon-impala.sh
-        container: qc.ver_nerdy-silver-turkey
+        - /usr/bin/env sh .sqa/script.muggy-brass-dugong.sh
+        container: qc.ver_hilly-coral-kudu
 timeout: 5400
