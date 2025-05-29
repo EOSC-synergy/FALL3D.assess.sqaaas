@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd gitlab.com/fall3d-suite/fall3d &&
-    get_git_tags.py
+cd github.com/FALL3D-suite/FALL3D &&
+    bandit -f json --quiet  --confidence-level high --severity-level high --recursive  .
 )

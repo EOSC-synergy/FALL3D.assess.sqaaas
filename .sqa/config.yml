@@ -4,71 +4,67 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    gitlab.com/fall3d-suite/fall3d:
+    github.com/FALL3D-suite/FALL3D:
       branch: master
-      repo: https://gitlab.com/fall3d-suite/fall3d
+      repo: https://github.com/FALL3D-suite/FALL3D
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      gitlab.com/fall3d-suite/fall3d git:
+      github.com/FALL3D-suite/FALL3D git:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-rust-kudu.sh
-        container: qc.acc_cheeky-white-dog
+        - /usr/bin/env sh .sqa/script.lanky-cream-tzu.sh
+        container: qc.acc_crappy-celadon-kudu
   QC.Doc:
     repos:
-      gitlab.com/fall3d-suite/fall3d find_doc_files.py:
+      github.com/FALL3D-suite/FALL3D find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-goldenrod-mongrel.sh
-        container: qc.doc_chummy-olivine-oyster
-      gitlab.com/fall3d-suite/fall3d git:
+        - /usr/bin/env sh .sqa/script.cloudy-eggplant-lemur.sh
+        container: qc.doc_surly-teal-urchin
+      github.com/FALL3D-suite/FALL3D git:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-apricot-cassowary.sh
-        container: qc.doc_homey-lemon-bee
-      gitlab.com/fall3d-suite/fall3d markdownlint:
+        - /usr/bin/env sh .sqa/script.craggy-cobalt-kakapo.sh
+        container: qc.doc_pretty-harlequin-caracal
+      github.com/FALL3D-suite/FALL3D markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-viridian-buffalo.sh
-        container: qc.doc_wimpy-auburn-mandrill
+        - /usr/bin/env sh .sqa/script.droopy-firebrick-chinchilla.sh
+        container: qc.doc_gummy-lilac-spaniel
   QC.Lic:
     repos:
-      gitlab.com/fall3d-suite/fall3d licensee:
+      github.com/FALL3D-suite/FALL3D licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-periwinkle-capuchin.sh
-        container: qc.lic_ugly-apricot-dingo
+        - /usr/bin/env sh .sqa/script.homely-bronze-emu.sh
+        container: qc.lic_snazzy-cornflower-spider
   QC.Met:
     repos:
-      gitlab.com/fall3d-suite/fall3d cff-converter-python:
+      github.com/FALL3D-suite/FALL3D cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-champagne-mole.sh
-        container: qc.met_crabby-dandelion-squirt
+        - /usr/bin/env sh .sqa/script.greasy-cerulean-wolf.sh
+        container: qc.met_cloudy-goldenrod-tapir
   QC.Sec:
     repos:
-      gitlab.com/fall3d-suite/fall3d bandit:
+      github.com/FALL3D-suite/FALL3D bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-coral-wombat.sh
-        container: qc.sec_hilly-lime-rabbit
+        - /usr/bin/env sh .sqa/script.messy-vermilion-crocodile.sh
+        container: qc.sec_sleazy-eggplant-vulture
   QC.Sty:
     repos:
-      gitlab.com/fall3d-suite/fall3d flake8:
+      github.com/FALL3D-suite/FALL3D flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-periwinkle-drever.sh
-        container: qc.sty_trippy-orchid-caterpillar
-      gitlab.com/fall3d-suite/fall3d jsonlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.grumpy-denim-labradoodle.sh
-        container: qc.sty_thirsty-brown-cheetah
+        - /usr/bin/env sh .sqa/script.shaggy-vermilion-dollar.sh
+        container: qc.sty_grumpy-mauve-lizard
   QC.Uni:
     repos:
-      gitlab.com/fall3d-suite/fall3d pytest:
+      github.com/FALL3D-suite/FALL3D pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-periwinkle-antelope.sh
-        container: qc.uni_pasty-cerise-neanderthal
+        - /usr/bin/env sh .sqa/script.leaky-red-meerkat.sh
+        container: qc.uni_boozy-mustard-spaniel
   QC.Ver:
     repos:
-      gitlab.com/fall3d-suite/fall3d get_git_tags.py:
+      github.com/FALL3D-suite/FALL3D get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-brass-dugong.sh
-        container: qc.ver_hilly-coral-kudu
+        - /usr/bin/env sh .sqa/script.lovely-tomato-eel.sh
+        container: qc.ver_snappy-viridian-slug
 timeout: 5400

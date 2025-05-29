@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd gitlab.com/fall3d-suite/fall3d &&
-    licensee detect . --confidence 60 --json 
+cd github.com/FALL3D-suite/FALL3D &&
+    cffconvert --validate 
 )

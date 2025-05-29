@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd gitlab.com/fall3d-suite/fall3d &&
-    jsonlint-cli "**/*.json"
+cd github.com/FALL3D-suite/FALL3D &&
+    pytest  --json-report  --json-report-indent 4
 )
