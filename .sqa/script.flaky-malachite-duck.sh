@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/FALL3D-suite/FALL3D &&
-    bandit -f json --quiet  --confidence-level high --severity-level high --recursive  .
+cd gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d &&
+    flake8 .
 )

@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/FALL3D-suite/FALL3D &&
-    licensee detect . --confidence 60 --json 
+cd gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d &&
+    git rev-parse --is-inside-work-tree 
 )

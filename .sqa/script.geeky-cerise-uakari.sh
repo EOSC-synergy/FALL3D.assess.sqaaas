@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/FALL3D-suite/FALL3D &&
+cd gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d &&
     find_doc_files.py --file_type all
 )

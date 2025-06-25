@@ -4,67 +4,61 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/FALL3D-suite/FALL3D:
+    gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d:
       branch: master
-      repo: https://github.com/FALL3D-suite/FALL3D
+      repo: https://gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/FALL3D-suite/FALL3D git:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d git:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-cream-tzu.sh
-        container: qc.acc_crappy-celadon-kudu
+        - /usr/bin/env sh .sqa/script.gimpy-asparagus-insect.sh
+        container: qc.acc_dorky-chartreuse-frise
   QC.Doc:
     repos:
-      github.com/FALL3D-suite/FALL3D find_doc_files.py:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-eggplant-lemur.sh
-        container: qc.doc_surly-teal-urchin
-      github.com/FALL3D-suite/FALL3D git:
+        - /usr/bin/env sh .sqa/script.geeky-cerise-uakari.sh
+        container: qc.doc_messy-tangerine-setter
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d git:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-cobalt-kakapo.sh
-        container: qc.doc_pretty-harlequin-caracal
-      github.com/FALL3D-suite/FALL3D markdownlint:
+        - /usr/bin/env sh .sqa/script.muggy-tomato-loon.sh
+        container: qc.doc_cranky-red-newfoundland
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-firebrick-chinchilla.sh
-        container: qc.doc_gummy-lilac-spaniel
+        - /usr/bin/env sh .sqa/script.freaky-platinum-gharial.sh
+        container: qc.doc_nippy-pumpkin-ray
   QC.Lic:
     repos:
-      github.com/FALL3D-suite/FALL3D licensee:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-bronze-emu.sh
-        container: qc.lic_snazzy-cornflower-spider
-  QC.Met:
-    repos:
-      github.com/FALL3D-suite/FALL3D cff-converter-python:
-        commands:
-        - /usr/bin/env sh .sqa/script.greasy-cerulean-wolf.sh
-        container: qc.met_cloudy-goldenrod-tapir
+        - /usr/bin/env sh .sqa/script.jumpy-firebrick-antelope.sh
+        container: qc.lic_leaky-brown-bobcat
   QC.Sec:
     repos:
-      github.com/FALL3D-suite/FALL3D bandit:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-vermilion-crocodile.sh
-        container: qc.sec_sleazy-eggplant-vulture
+        - /usr/bin/env sh .sqa/script.homely-azure-turtle.sh
+        container: qc.sec_muzzy-copper-camel
   QC.Sty:
     repos:
-      github.com/FALL3D-suite/FALL3D flake8:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.shaggy-vermilion-dollar.sh
-        container: qc.sty_grumpy-mauve-lizard
+        - /usr/bin/env sh .sqa/script.flaky-malachite-duck.sh
+        container: qc.sty_fuzzy-saffron-ragdoll
   QC.Uni:
     repos:
-      github.com/FALL3D-suite/FALL3D pytest:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-red-meerkat.sh
-        container: qc.uni_boozy-mustard-spaniel
+        - /usr/bin/env sh .sqa/script.beady-sapphire-fox.sh
+        container: qc.uni_droopy-alizarin-whale
   QC.Ver:
     repos:
-      github.com/FALL3D-suite/FALL3D get_git_tags.py:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-tomato-eel.sh
-        container: qc.ver_snappy-viridian-slug
+        - /usr/bin/env sh .sqa/script.flaky-beige-tang.sh
+        container: qc.ver_hazy-magnolia-butterfly
 timeout: 5400
