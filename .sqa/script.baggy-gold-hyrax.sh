@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d &&
-    mdl --json  .
+cd gitlab.com/fall3d-suite/fall3d &&
+    flake8 .
 )
