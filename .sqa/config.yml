@@ -2,63 +2,63 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.13
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/FALL3D-suite/FALL3D:
-      branch: master
-      repo: https://github.com/FALL3D-suite/FALL3D
+    gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d:
+      branch: scripts
+      repo: https://gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/FALL3D-suite/FALL3D git:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d git:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-taupe-angelfish.sh
-        container: qc.acc_pokey-rust-newt
+        - /usr/bin/env sh .sqa/script.muggy-cardinal-squid.sh
+        container: qc.acc_woozy-sangria-elephant
   QC.Doc:
     repos:
-      github.com/FALL3D-suite/FALL3D find_doc_files.py:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-russet-bat.sh
-        container: qc.doc_trippy-bronze-quoll
-      github.com/FALL3D-suite/FALL3D git:
+        - /usr/bin/env sh .sqa/script.lanky-violet-sheepdog.sh
+        container: qc.doc_hilly-flax-starfish
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d git:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-turquoise-moth.sh
-        container: qc.doc_beady-tan-lemur
-      github.com/FALL3D-suite/FALL3D markdownlint:
+        - /usr/bin/env sh .sqa/script.lousy-green-uguisu.sh
+        container: qc.doc_geeky-amethyst-uguisu
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-pear-burmese.sh
-        container: qc.doc_hasty-auburn-cat
+        - /usr/bin/env sh .sqa/script.tasty-lilac-jellyfish.sh
+        container: qc.doc_dorky-emerald-owl
   QC.Lic:
     repos:
-      github.com/FALL3D-suite/FALL3D licensee:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-orchid-pinscher.sh
-        container: qc.lic_hilly-copper-hippopotamus
-  QC.Met:
-    repos:
-      github.com/FALL3D-suite/FALL3D cff-converter-python:
-        commands:
-        - /usr/bin/env sh .sqa/script.sleepy-persimmon-gharial.sh
-        container: qc.met_snoopy-chestnut-woodpecker
+        - /usr/bin/env sh .sqa/script.gimpy-corn-bandicoot.sh
+        container: qc.lic_skinny-beige-tapir
   QC.Sec:
     repos:
-      github.com/FALL3D-suite/FALL3D bandit:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-smalt-forest.sh
-        container: qc.sec_silly-champagne-eleuth
+        - /usr/bin/env sh .sqa/script.gummy-dandelion-mandrill.sh
+        container: qc.sec_muzzy-cerulean-hedgehog
   QC.Sty:
     repos:
-      github.com/FALL3D-suite/FALL3D flake8:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-alizarin-mist.sh
-        container: qc.sty_gimpy-cinnamon-frog
+        - /usr/bin/env sh .sqa/script.nippy-chestnut-saola.sh
+        container: qc.sty_cloudy-yellow-newt
+  QC.Uni:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-scarlet-crocodile.sh
+        container: qc.uni_woozy-myrtle-capybara
   QC.Ver:
     repos:
-      github.com/FALL3D-suite/FALL3D get_git_tags.py:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-salmon-impala.sh
-        container: qc.ver_nerdy-silver-turkey
+        - /usr/bin/env sh .sqa/script.cloudy-teal-beaver.sh
+        container: qc.ver_gamy-green-llama
 timeout: 5400
