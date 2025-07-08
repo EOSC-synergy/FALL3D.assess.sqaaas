@@ -4,61 +4,71 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d:
+    gitlab.com/fall3d-suite/fall3d:
       branch: master
-      repo: https://gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d
+      repo: https://gitlab.com/fall3d-suite/fall3d
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d git:
+      gitlab.com/fall3d-suite/fall3d git:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-yellow-coral.sh
-        container: qc.acc_freaky-fuchsia-armadillo
+        - /usr/bin/env sh .sqa/script.wimpy-purple-serval.sh
+        container: qc.acc_woozy-scarlet-spider
   QC.Doc:
     repos:
-      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d find_doc_files.py:
+      gitlab.com/fall3d-suite/fall3d find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-alizarin-kudu.sh
-        container: qc.doc_paltry-asparagus-mule
-      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d git:
+        - /usr/bin/env sh .sqa/script.gamy-alizarin-albatross.sh
+        container: qc.doc_cloudy-ruby-dunker
+      gitlab.com/fall3d-suite/fall3d git:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-maroon-quoll.sh
-        container: qc.doc_pokey-thistle-termite
-      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d markdownlint:
+        - /usr/bin/env sh .sqa/script.pokey-malachite-birman.sh
+        container: qc.doc_sloppy-purple-turkey
+      gitlab.com/fall3d-suite/fall3d markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-teal-monster.sh
-        container: qc.doc_wimpy-pumpkin-forest
+        - /usr/bin/env sh .sqa/script.gloppy-ruby-turtle.sh
+        container: qc.doc_wiggy-sepia-hedgehog
   QC.Lic:
     repos:
-      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d licensee:
+      gitlab.com/fall3d-suite/fall3d licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-aquamarine-paradise.sh
-        container: qc.lic_messy-puce-hyrax
+        - /usr/bin/env sh .sqa/script.wimpy-teal-weasel.sh
+        container: qc.lic_geeky-black-mouse
+  QC.Met:
+    repos:
+      gitlab.com/fall3d-suite/fall3d cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.lanky-heliotrope-chamois.sh
+        container: qc.met_lovely-azure-caiman
   QC.Sec:
     repos:
-      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d bandit:
+      gitlab.com/fall3d-suite/fall3d bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-smalt-binturong.sh
-        container: qc.sec_foggy-corn-gopher
+        - /usr/bin/env sh .sqa/script.ugly-periwinkle-spitz.sh
+        container: qc.sec_shaggy-lilac-crocodile
   QC.Sty:
     repos:
-      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d flake8:
+      gitlab.com/fall3d-suite/fall3d flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-brass-leopard.sh
-        container: qc.sty_wimpy-thistle-bracke
+        - /usr/bin/env sh .sqa/script.skimpy-violet-dachshund.sh
+        container: qc.sty_hasty-malachite-iguana
+      gitlab.com/fall3d-suite/fall3d jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.queasy-periwinkle-mammoth.sh
+        container: qc.sty_homely-magenta-camel
   QC.Uni:
     repos:
-      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d pytest:
+      gitlab.com/fall3d-suite/fall3d pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-magenta-jellyfish.sh
-        container: qc.uni_scaly-saffron-snake
+        - /usr/bin/env sh .sqa/script.lousy-ochre-badger.sh
+        container: qc.uni_baggy-mauve-argentino
   QC.Ver:
     repos:
-      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/fall3d get_git_tags.py:
+      gitlab.com/fall3d-suite/fall3d get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.woozy-lavender-oriole.sh
-        container: qc.ver_ugly-russet-woodpecker
+        - /usr/bin/env sh .sqa/script.tacky-heliotrope-discus.sh
+        container: qc.ver_cheeky-tangerine-crab
 timeout: 5400
